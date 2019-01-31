@@ -1,5 +1,5 @@
 object helloWorld extends App {
-  
+
   def greeter(name: String, shout : Boolean) = {
    if (shout) {
      println(s"hello $name!")
