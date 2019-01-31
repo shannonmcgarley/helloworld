@@ -1,6 +1,6 @@
 object helloWorld extends App {
 
-  def greeter(name: String, shout : Boolean) = {
+  def greeter(name: String, shout : Boolean = false) = {
    if (shout) {
      println(s"hello $name!")
    } else{
@@ -8,8 +8,9 @@ object helloWorld extends App {
    }
   }
 
-//  greeter("pan", true)
-//  greeter("pan", false)
+  greeter("pan", true)
+  greeter("pan")
+  greeter("pan", false)
 
   def personalGreeterold(names : String): Unit = {
     if (names == "andrew") {
@@ -43,10 +44,10 @@ object helloWorld extends App {
   }
 
   ///////////////////////////////
-  personalGreeter("shannon")
+ /* personalGreeter("shannon")
   personalGreeter("pan")
   personalGreeter("andrew")
   personalGreeter("dane")
-  personalGreeter("dan")
+  personalGreeter("dan")*/
   //////////////////////////////////
 }
