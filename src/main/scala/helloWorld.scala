@@ -1,3 +1,6 @@
 object helloWorld extends App {
-println("hello")
+
+  val name = "shannon"
+println("hello " + name)
+  
 }
