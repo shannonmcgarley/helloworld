@@ -1,12 +1,16 @@
 object helloWorld extends App {
 
   val name = "shannon"
-  val name2 = "pan"
+  val pan = "pan"
 
-  def greeter(name: String) = {
-    println(s"hello $name")
+  def greeter(name: String, shout : Boolean) = {
+   if (shout) {
+     println(s"hello $name!")
+   } else{
+     println(s"hello $name")
+   }
   }
 
-  greeter(name)
-  greeter(name2)
+  greeter(pan, true)
+  greeter(pan, false)
 }
