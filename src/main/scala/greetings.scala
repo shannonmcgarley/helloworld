@@ -1,6 +1,8 @@
 object greetings extends App {
 
-  val name = "shannon"
-  println("hello " + name)
+  def greet(name : String) = println(s"hello $name")
 
+  val name = "shannon"
+
+  greet(name)
 }
