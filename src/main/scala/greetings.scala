@@ -1,5 +1,9 @@
 import scala.io.StdIn
 
+object Prompt {
+  def ask(message : String) = StdIn.readLine(message)
+}
+
 class Person(name: String) {
 
   def speak(): String = {
@@ -14,7 +18,7 @@ class Person(name: String) {
 
 object greetings extends App {
 
-  val name = StdIn.readLine("what is your name? ")
+  val name = Prompt.ask("what is your name? ")
   val person = new Person(name)
   println(person.speak())
 
