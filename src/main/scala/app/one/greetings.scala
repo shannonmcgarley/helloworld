@@ -1,21 +1,10 @@
+package app.one
+
 import scala.io.StdIn
+
 
 object Prompt {
   def ask(message: String) = StdIn.readLine(message)
-}
-
-class Person(name: String, age: Int) {
-
-  private val years: String = if (age > 1) "years" else "year"
-
-  def speak(): String = {
-    if (name == "shannon") {
-      "you dont get a hello, bye felicia"
-    } else {
-      s"hello $name, you are $age $years old"
-
-    }
-  }
 }
 
 object greetings extends App {
@@ -27,7 +16,23 @@ object greetings extends App {
 
 }
 
-abstract class BankAccount(accountNumber : String, balance : Double) {
+class Person(name: String, age: Int, private val bankAccount: BankAccount) {
+
+  def this(name : String, age : Int) = this(name, age, new SavingsAccount("12345", 0.00))
+
+  private def years: String = if (age > 1) "years" else "year"
+
+  def speak(): String = {
+    if (name == "shannon") {
+      "you dont get a hello, bye felicia"
+    } else {
+      s"hello $name, you are $age $years old. \n You have ${bankAccount.balance} in your account"
+
+    }
+  }
+}
+
+abstract class BankAccount(accountNumber : String, val balance : Double) {
   def withdraw(amount: Double): BankAccount
 
   def deposit(amount: Double): BankAccount

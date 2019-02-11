@@ -1,3 +1,5 @@
+package app.two
+
 object helloWorld extends App {
 
   def greeter(name: String, shout : Boolean = false) = {
@@ -53,6 +55,7 @@ object helloWorld extends App {
 }
 
 
+
 import scala.io.StdIn
 
 object Prompt {
@@ -82,7 +85,7 @@ object greetings extends App {
 
 }
 
-abstract class BankAccount(accountNumber: String, balance: Double) {
+abstract class BankAccount(accountNumber: String,balance: Double) {
   def withdraw(amount: Double): BankAccount
 
   def deposit(amount: Double): BankAccount
