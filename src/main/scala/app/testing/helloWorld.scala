@@ -1,4 +1,4 @@
-package app.two
+package app.testing
 
 object helloWorld extends App {
 
